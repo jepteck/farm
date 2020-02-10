@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -32,12 +34,8 @@
 <body>
     <div id="app">
        @include('inc.nav')
-<div class="container">
-        <main class="py-4">
 
             @yield('content')
-        </main>
-      </div>
     </div>
 
     <!-- Footer -->
@@ -50,5 +48,8 @@
   <!-- Copyright -->
 
 </footer>
+<script type="text/javascript" src="js/script.js"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 </body>
 </html>

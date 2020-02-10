@@ -304,4 +304,92 @@ button:hover {
     to {transform: scale(1)}
 }
   
+/* // owners */
+.banner{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  color:black;
+
+}
+.banner:after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+
+}
+.banner:before{
+    border: 1px solid blue;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+ -webkit-transform: translatez(0) scale(1.0, 1.0);
+  -moz-transform: translateZ(0) scale(1.0, 1.0);
+  -ms-transform: translateZ(0) scale(1.0, 1.0);
+  -o-transform: translateZ(0) scale(1.0, 1.0); 
   
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: increase 60s linear 10s infinite;
+  animation: decrease 60s linear 10s infinite;
+  -webkit-transition: all o.2s ease-in-out;
+  -ms-transition: all o.2s ease-in-out;
+  -o-transition: all o.2s ease-in-out;
+  transition: all o.2s ease-in-out;
+  z-index: -2;
+}
+.banner-text{
+  width:60% ;
+  margin-top: 10%;
+  text-align: center;
+}
+@keyframes increase{
+    0%{ transform: scale(1)}
+    100%{ transform: scale(1.5)}
+} 
+
+#container ul{
+list-style: none;
+
+}
+#container ul li select{
+
+width: 300px;
+border: 1px solid white;
+height: 50px;
+line-height: 50px;
+text-align: center;
+float: left;
+color: gray;
+}
+.listNow button{
+    width: 150px;
+    border: 1px solid white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: black;
+}
+.showcase{
+    padding-top: 5%;
+    
+}
+.showcase h2{
+    margin-bottom: 30px;
+}
+.row{
+    justify-content: space-around;
+}

@@ -70,5 +70,8 @@ class PagesController extends Controller
 
         public function owners(){
             return view('usersPages.owners');
-        }  
+ 
+       }  
+       
+       
 }

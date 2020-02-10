@@ -30,18 +30,28 @@ class LoginController extends Controller
      *
      * @var string
      */
-    //machinery owner
+    //machinery owner 
+ 
     // protected $redirectTo = RouteServiceProvider::HOME;
-    protected function authenticated($request, $user ){
+    protected function authenticated(Request $request, $user ){
+    
+$user=DB::table('users')->where(['user_type'=>'machinery owner']); 
+$user1=DB::table('users')->where(['user_type'=>'machinery hire']); 
 
-        if ($user->user_type('machinery owner')) {
+        if ($user) {
 
             return redirect('owners');
 
+         }
+        
+        if ($user1) {
+
+            return redirect('hires');
+
         }
- else {
-    return redirect('hires');
- }
+//  else {
+//     return redirect('hires');
+//  }
 
         
 

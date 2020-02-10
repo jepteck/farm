@@ -18,7 +18,10 @@ class PostController extends Controller
        $posts= Post::all();
         return view('post.index')->with('posts', $posts);
     }
-
+      public function post(){
+        return view('usersPages.post');
+    }
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -35,9 +38,31 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function postimage(Request $request)
     {
-        //
+        $post = new Post();
+        
+        $post->equipment_type =$request->input('equipment_type');
+        $post->sub_county	 =$request->input('sub_county');
+        $post->manufacturer =$request->input('manufacturer');
+        $post->list_title =$request->input('list_title');
+        $post->cost =$request->input('cost');
+        if ($request->hasfile('image')) {
+            # code...
+            $file=$request->file('image');
+            $extension =$file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/post/', $filename);
+            $post->image = $filename;
+
+        }else {
+            return $request;
+            $post->image = '';
+
+        }
+        $post->save();
+
+        return view('post')->with('post', $post);
     }
 
     /**

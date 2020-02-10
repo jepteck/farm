@@ -21,6 +21,8 @@ Route::get('/login', 'PagesController@login');
 Route::resource('posts', 'PostController');  
 Route::get('/hires', 'PagesController@hires');
 Route::get('/owners', 'PagesController@owners');
+Route::get('/post', 'PostController@post')->name('post');
+Route::Post('/postimage', 'PostController@postimage')->name('postimage');
 /*
 Auth::routes();
 

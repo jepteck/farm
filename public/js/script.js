@@ -101,4 +101,15 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+//dynamic page changing
+
+$(document).ready(function(){
+$('#data').load('owners');
+
+$('ul #post button a').click(function(){
+    alert('okey');
+});
+});
    

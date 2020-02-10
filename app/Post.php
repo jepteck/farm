@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     //
-    protected $table='tbltest';
+    protected $table='posts';
     // public $primaryKey='machine_id';
       //protected $table='posts';
       protected $fillable = [
-        'name', 'email',
+      
+        'equipment_type',	'sub_county',   'equipment_type', 'sub_county', 'manufacturer', 'cost', 'image', 
     ];
 }
