@@ -21,6 +21,10 @@ class PostController extends Controller
       public function post(){
         return view('usersPages.post');
     }
+
+    public function dashboard(){
+        return view('owners.dashboard');
+    }
    
     /**
      * Show the form for creating a new resource.

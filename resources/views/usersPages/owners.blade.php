@@ -55,8 +55,17 @@
                           <h6>Manufacturer</h6>
                           <select name="manufacturer"  class=""> 
                               <option style="display:none" >Equipment sub-county</option>
-                           <option value="machinery owner" >John deer</option>
-                           <option value="machinery hire">mazeei</option>
+                           <option value="machinery owner" >John Deere</option>
+                           <option value="machinery hire">massay Ferguson</option>
+                           <option value="machinery owner" >Case IH</option>
+                           <option value="machinery hire">New Holand Tractores</option>
+                           <option value="machinery owner" >KUBOTA</option>
+                           <option value="machinery hire">AGCO Corp</option>
+                           <option value="machinery hire">Versatile</option>
+                           <option value="machinery owner" >Valtar</option>
+                           <option value="machinery hire">Caterpilla Inc</option>
+                           <option value="machinery owner" >Others</option>
+                          
                          
                                  </select> 
                         </div>

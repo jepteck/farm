@@ -23,6 +23,11 @@ Route::get('/hires', 'PagesController@hires');
 Route::get('/owners', 'PagesController@owners');
 Route::get('/post', 'PostController@post')->name('post');
 Route::Post('/postimage', 'PostController@postimage')->name('postimage');
+
+
+Route::group(['middleware' =>['auth','owners']], function (){
+    Route::get('/dashboard', 'PostController@dashboard')->name('dashboard');
+});
 /*
 Auth::routes();
 

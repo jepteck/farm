@@ -7,8 +7,9 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use User;
-use Illuminate\support\facades\DB;
+use Illuminate\support\facades\Auth;
 use Illuminate\Http\Response;
+ 
 
 class LoginController extends Controller
 {
@@ -35,16 +36,14 @@ class LoginController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     protected function authenticated(Request $request, $user ){
     
-$user=DB::table('users')->where(['user_type'=>'machinery owner']); 
-$user1=DB::table('users')->where(['user_type'=>'machinery hire']); 
 
-        if ($user) {
+        if (Auth::user()->user_type == 'machinery owner') {
 
             return redirect('owners');
 
          }
         
-        if ($user1) {
+        else {
 
             return redirect('hires');
 
